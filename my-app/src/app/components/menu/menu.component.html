@@ -1,0 +1,32 @@
+
+<div class="flex flex-row bg-gray-200 resizable-card" style="width:{{width}}px; padding-right: 3px;">
+    <div>
+        <hr class="text-bluegray-50 mt-3 mb-5 mx-1">
+
+        <div class="card-element-list">
+            <ng-template ngFor let-item [ngForOf]="items">
+                <app-menu-element class="element" [data]="item"></app-menu-element>
+            </ng-template>
+        </div>
+
+        <hr class="text-bluegray-50 mt-5 mb-3 mx-1">
+
+        <app-tree [tree]="tree" *ngIf="isTreeVisible"></app-tree>
+        <p-sidebar [(visible)]="isHiddenTreeVisible" position="left">
+            <app-tree [tree]="tree"></app-tree>
+        </p-sidebar>
+
+        <div
+          *ngIf="!isTreeVisible"
+          (click)="openHiddenTree($event)"
+          class="w-full flex align-items-center justify-content-center my-3"
+        >
+            <i class="pi pi-list" style="font-size: 2.5rem; margin-right:15px"></i>
+        </div>
+    </div>
+    <div
+      (mousedown)="onMouseDown($event)"
+      class="card-element-list-resize bg-gray-100"
+      style="float: right; padding: 2px"
+    ></div>
+</div>

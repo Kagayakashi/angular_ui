@@ -1,0 +1,18 @@
+<div class="flex flex-column" style="min-height: 100vh;">
+    <!-- Информационная панель -->
+    <div class="flex flex-column flex-initial">
+        <app-nav></app-nav>
+    </div>
+
+    <div class="flex flex-column flex-1">
+        <div class="grid flex flex-1">
+            <!-- Панель управления -->
+            <app-menu [items]="data" class="flex"></app-menu>
+    
+            <!-- Основное рабочее окно -->
+            <div class="col surface-50">
+                <app-window></app-window>
+            </div>
+        </div>
+    </div>
+</div>

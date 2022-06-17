@@ -1,0 +1,47 @@
+<!-- Информационная панель -->
+<div class="grid bg-blue-600 text-white flex align-items-center">
+    <div class="col-fixed" style="width:80px">
+        <p-avatar
+            size="xlarge"
+            label="SB"
+            styleClass="p-mr-2"
+            [style]="{'background-color': '#ffffff', 'color': 'var(--blue-600)'}"
+        ></p-avatar>
+    </div>
+    <div class="col-fixed mx-5" style="width:165px">
+        <p-image src="assets/images/logo2.png" alt="Image" width="150"></p-image>
+    </div>
+    <div class="col-fixed" style="width:200px">
+        <div class="grid">
+            <div class="col-6"><i class="pi pi-file text-green-600"></i><span class="text-green-100">1775</span></div>
+            <div class="col-6"><i class="pi pi-comments text-green-600"></i><span class="text-green-100">4</span></div>
+        </div>
+        <div class="grid">
+            <div class="col-6"><i class="pi pi-user text-green-600"></i><span class="text-green-100">8</span></div>
+            <div class="col-6"><i class="pi pi-check-square text-green-600"></i><span class="text-green-100">04:20</span></div>
+        </div>
+    </div>
+    <div class="col"></div>
+    <div class="col-fixed" style="width:100px">
+        <p-inputSwitch [(ngModel)]="themeChecked"></p-inputSwitch></div>
+    <div class="col-fixed" style="width:300px">
+        <div class="grid">
+            <div class="col-8">
+                <div class="grid">
+                    <div class="col-12">Вячеслав Сергеевич</div>
+                    <div class="col-12">Директор подразделения разработки SimBASE 5</div>
+                </div>
+            </div>
+            <div class="col-4 mt-2">
+                <p-avatar
+                    icon="pi pi-user"
+                    pBadge
+                    value="4"
+                    severity="success"
+                    styleClass="p-mr-2"
+                    size="xlarge"
+                ></p-avatar>
+            </div>
+        </div>
+    </div>
+</div>

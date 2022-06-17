@@ -1,0 +1,19 @@
+<p-contextMenu [target]="mytree" [model]="contextElements" *ngIf="tree.elements"></p-contextMenu>
+
+<div #mytree>
+  <p-tree
+  *ngIf="tree.elements"
+  [value]="tree.elements"
+  selectionMode="single"
+  [(selection)]="selectedElement"
+  (onNodeSelect)="nodeSelect($event)"
+  scrollHeight="400px"
+  [emptyMessage]="emptyFilter"
+  [filter]="true"
+  filterMode="strict"
+  (onFilter)="highlightFiltered($event)">
+    <ng-template let-filtered pTemplate="hightlight">
+        <span [innerHTML]="filtered.data"></span>
+    </ng-template>
+  </p-tree>
+</div>

@@ -1,0 +1,10 @@
+<div
+  class="text-black p-component flex align-items-center justify-content-center flex-column"
+  style="cursor:pointer"
+  [pTooltip]="data.tooltip"
+  tooltipPosition="top"
+  (click)="selectMenuItem()"
+  >
+    <i class="{{data.icon}}" style="font-size: 2rem"></i>
+    <p class="m-0">{{data.name}}</p>
+</div>
